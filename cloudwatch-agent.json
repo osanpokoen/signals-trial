@@ -1,0 +1,29 @@
+{
+  "agent": {
+    "region": "ap-northeast-1",
+    "debug": true
+  },
+  "traces": {
+    "traces_collected": {
+      "application_signals": {}
+    }
+  },
+  "logs": {
+    "metrics_collected": {
+      "application_signals": {
+        "rules": [
+          {
+            "selectors": [
+              {
+                "dimension": "Operation",
+                "match": "GET /"
+              }
+            ],
+            "action": "drop",
+            "rule_name": "DropHealthCheck"
+          }
+        ]
+      }
+    }
+  }
+}
